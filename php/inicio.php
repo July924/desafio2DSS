@@ -107,25 +107,59 @@ $resultado_categorias = $conexion->query($sql_categorias);
   ?>
 
   <!-- Modal del Carrito -->
-  <div id="modalCarrito" class="modal">
-    <div class="modal-content">
-      <span id="cerrarCarrito" style="cursor:pointer; float:left;">&times;</span>
-      <h2>Carrito de Compras</h2>
-      <table id="tablaCarrito"  class="table table-striped">
-        <thead>
-          <tr>
-            <th>Imagen</th>
-            <th>Producto</th>
-            <th>Precio</th>
-            <th>Unidades</th>
-            <th>Total</th>
-            <th>Eliminar</th>
-          </tr>
-        </thead>
-        <tbody></tbody>
-      </table>
-    </div>
+<div id="modalCarrito" class="modal">
+  <div class="modal-content">
+    <span id="cerrarCarrito" style="cursor:pointer; float:left;">&times;</span>
+    <h2>Carrito de Compras</h2>
+    <table id="tablaCarrito" class="table table-striped">
+      <thead>
+        <tr>
+          <th>Imagen</th>
+          <th>Producto</th>
+          <th>Precio</th>
+          <th>Unidades</th>
+          <th>Total</th>
+          <th>Eliminar</th>
+        </tr>
+      </thead>
+      <tbody></tbody>
+    </table>
+
+    <!-- Formulario de Compra -->
+    <hr>
+    <h3>Formulario de Compra</h3>
+    <form action="procesar_compra.php" method="POST" class="row g-3 mt-3">
+      <div class="col-md-6">
+        <label for="nombre" class="form-label">Nombre del Comprador</label>
+        <input type="text" class="form-control" id="nombre" name="nombre" required>
+      </div>
+
+      <div class="col-md-6">
+        <label for="dui" class="form-label">DUI</label>
+        <input type="text" class="form-control" id="dui" name="dui" placeholder="00000000-0" pattern="^\d{8}-\d{1}$" required>
+      </div>
+
+      <div class="col-md-6">
+        <label for="tarjeta" class="form-label">Número de Tarjeta</label>
+        <input type="text" class="form-control" id="tarjeta" name="tarjeta" placeholder="1234 5678 9012 3456" pattern="^\d{4} \d{4} \d{4} \d{4}$" required>
+      </div>
+
+      <div class="col-md-3">
+        <label for="fecha" class="form-label">Fecha de Vencimiento</label>
+        <input type="text" class="form-control" id="fecha" name="fecha" placeholder="MM/AA" pattern="^(0[1-9]|1[0-2])\/\d{2}$" required>
+      </div>
+
+      <div class="col-md-6">
+        <label for="correo" class="form-label">Correo Electrónico</label>
+        <input type="email" class="form-control" id="correo" name="correo" required pattern="^[^@\s]+@[^@\s]+\.[^@\s]+$">
+      </div>
+
+      <div class="col-12">
+        <button type="submit" class="btn btn-success">Finalizar Compra</button>
+      </div>
+    </form>
   </div>
+</div>
 
   <footer></footer>
 </body>
