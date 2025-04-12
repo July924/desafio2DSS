@@ -1,0 +1,115 @@
+*{
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+
+header{
+    border: 1px solid rgb(201, 223, 233);
+    height: 70px;
+    width: 100%;
+    position:fixed;
+    top: 0;
+    background: rgba(0, 0, 0, 0.2);
+    z-index: 100;
+
+}
+
+nav{
+    width: 100%;
+    height: 100%;
+    display: flex;
+    padding: 10px;
+}
+
+nav ul {
+    width: 100%;
+    height: 100%;
+    display: flex;
+    justify-content: right;
+    align-items: center;
+    gap: 20px;
+    padding-right:20px ;
+}
+
+nav ul li{
+list-style: none;
+}
+
+nav ul li a{
+    text-decoration: none;
+}
+
+
+nav ul li a i{
+   font-size: 30px;
+   color: white;
+}
+
+nav ul li a i:hover{
+    transition: 0.3s;
+    color: rgb(68, 89, 166);
+}
+
+section{
+    width: 100%;
+    min-height: 650px;
+    padding: 20px;
+    background-color: #f4f6faf3;
+}
+
+#inicio{
+    background-image: url(https://beam-images.warnermediacdn.com/BEAM_LWM_DELIVERABLES/fff09eaf-17c3-446b-be32-8a0d47e4ccf1/02e11de2-6eb8-11ef-bb0b-0afff21f57b1?host=wbd-images.prod-vod.h264.io&partner=beamcom);
+    background-size: cover;
+   
+}
+
+.container{
+    width: 100%;
+    min-height: 650px;
+    display: flex;
+    flex-direction: column;
+    padding: 8px;
+}
+
+.container .titulo{
+    text-align: center;
+    font-family: "Electrolize", sans-serif;
+   font-size: 30px;
+}
+
+.container .content-target{
+    display: flex;
+    justify-content: center;
+    padding: 20px;
+    gap: 40px;
+    width: 100%;
+    min-height:500px ;
+
+}
+.container .content-target .target{
+    border: 1px solid rgb(229, 230, 225);
+    width: 500px;
+    min-height: 550px;
+    border-radius: .5rem;
+    padding: 10px;
+    display: flex;
+    flex-direction: column;
+    box-shadow: 0px 20px 10px 0px rgba(0, 0, 0, 0.3);
+}
+
+.container .content-target .target .imagen{
+    width: 100%;
+    height: 450px;
+}
+
+.container .content-target .target .info{
+    padding: 5px;
+    width: 100%;
+}
+
+footer{
+    width: 100%;
+    height: 65px;
+    background-color: #C1D8C3;
+}
